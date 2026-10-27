@@ -1,1 +1,8 @@
-[Upload in progress: see the project ZIP in the conversation for the complete file contents.]
+numpy
+pandas
+scikit-learn>=1.2
+matplotlib
+seaborn
+jupyter
+ipykernel
+xgboost>=2.0
