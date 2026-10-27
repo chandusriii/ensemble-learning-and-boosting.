@@ -1,59 +1,35 @@
 # Ensemble Learning and Boosting
 
-A hands-on Python repository for ensemble learning, boosting algorithms, and model-combination methods. It extends the supervised-learning work with focused examples and concept guides.
+This repository collects the **original Jupyter notebooks supplied for AdaBoost, Gradient Boosting, heterogeneous ensemble methods (voting and stacking), and XGBoost**. The four original notebooks are preserved exactly as uploaded. Their cells, source code, order, metadata, and outputs have not been rewritten.
 
-## Topics
-- AdaBoost with a decision-stump base learner
-- Gradient Boosting for classification and regression
-- XGBoost classification
-- Homogeneous vs. heterogeneous ensembles
-- Voting, stacking, and blending
-- Train/test discipline and task-appropriate evaluation
+## Original notebooks
 
-## Repository structure
+- [AdaBoost](notebooks/02_AdaBoost_Classification.ipynb) — original uploaded file `adaboost.ipynb`.
+- [Gradient Boosting Classifier and Regressor](notebooks/03_Gradient_Boosting_Classifier_and_Regressor.ipynb) — original uploaded file `gradient_boosting.ipynb`.
+- [Heterogeneous Ensembles: Voting and Stacking](notebooks/04_Heterogeneous_Ensembles_Voting_and_Stacking.ipynb) — original uploaded file `ensemble_heterogenous.ipynb`.
+- [XGBoost Classification](notebooks/05_XGBoost_Classification.ipynb) — original uploaded file `xgboost_classification.ipynb`.
+
+## Repository layout
+
 ```text
 .
-├── notebooks/
-│   ├── 02_AdaBoost_Classification.ipynb
-│   ├── 03_Gradient_Boosting_Classifier_and_Regressor.ipynb
-│   ├── 04_Voting_and_Stacking.ipynb
-│   ├── 05_XGBoost_Classification.ipynb
-│   ├── 06_Blending_Classifier.ipynb
-│   └── README.md
-├── concepts/
-│   ├── boosting_algorithms.md
-│   ├── ensemble_types.md
-│   ├── gradient_boosting_parameters.md
-│   └── voting_stacking_blending.md
-├── .github/workflows/validate-notebooks.yml
-└── requirements.txt
+├── notebooks/          # Original user notebooks, preserved as supplied
+├── concepts/           # Supplemental concept guides, separate from notebook code
+├── requirements.txt
+└── .github/workflows/validate-notebooks.yml
 ```
 
-## Setup
-Python 3.10+ recommended.
+## Environment
+
+Install Python 3.10+ and dependencies, then start Jupyter from the repository root:
 
 ```bash
-python -m venv .venv
-# Windows PowerShell: .venv\Scripts\Activate.ps1
-# macOS/Linux: source .venv/bin/activate
-python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 jupyter notebook
 ```
 
-## Notebook guide
-1. [AdaBoost classification](notebooks/02_AdaBoost_Classification.ipynb)
-2. [Gradient Boosting classifier and regressor](notebooks/03_Gradient_Boosting_Classifier_and_Regressor.ipynb)
-3. [Voting and stacking](notebooks/04_Voting_and_Stacking.ipynb)
-4. [XGBoost classification](notebooks/05_XGBoost_Classification.ipynb)
-5. [Blending classifier](notebooks/06_Blending_Classifier.ipynb)
+## Important
 
-## Concept guides
-- [Boosting algorithms](concepts/boosting_algorithms.md)
-- [Homogeneous and heterogeneous ensembles](concepts/ensemble_types.md)
-- [Voting, stacking, and blending](concepts/voting_stacking_blending.md)
-- [Gradient Boosting parameters](concepts/gradient_boosting_parameters.md)
+The notebooks above are preserved as-is. They may contain the user's original conventions or issues. If execution errors are found, document them and put changes in separately named `*_improved.ipynb` copies or explicit follow-up commits. Do not silently edit these original copies.
 
-Examples use synthetic datasets for reproducibility. Scores from synthetic data are educational demonstrations, not guarantees of real-world performance. Notebook implementations are organized from the code supplied for this repository; corrections and explanatory additions are called out in context.
-
-A Novogen Labs-related project can be added separately once its scope and code are ready.
+Blending was not one of the four uploaded notebooks. If added later, it will be labelled clearly as an additional example rather than original user code.
